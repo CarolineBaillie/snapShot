@@ -20,8 +20,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "picController") as! picController
         self.present(obj, animated: true, completion: nil)
         // For Computer
-//        let obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newMemory") as! newMemory
-//        self.present(obj, animated: true, completion: nil)
+    //        let obj = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newMemory") as! newMemory
+    //        self.present(obj, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

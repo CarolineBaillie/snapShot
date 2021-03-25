@@ -7,6 +7,7 @@
 
 import Foundation
 import Parse
+
 class sessionManager: NSObject {
     // allows access from other files
     static let shared = sessionManager()
@@ -157,14 +158,14 @@ class sessionManager: NSObject {
         let imageData:Data = img.jpegData(compressionQuality: compressionQuality)!
         UIGraphicsEndImageContext()
         let imageFinal = UIImage(data: imageData)!
-        // preping to save image
+        // prepping to save image
         let imgData = imageFinal.pngData()
         let imageFile = PFFileObject(name:"image.png", data:imgData!)
         mem["Image"] = imageFile
         // save all
         mem.saveInBackground { (succeeded, error)  in
             if (succeeded) {
-//                The object has been saved.
+    //                The object has been saved.
                 memory.objID = mem.objectId as! String
                 self.memories.append(memory)
                 completion(true)
@@ -174,8 +175,8 @@ class sessionManager: NSObject {
             }
         }
     }
-    
-    
+
+
     func updateMemory (memory:Memory, completion:@escaping (_ success:Bool) -> ()) {
         // find memory
         let query = PFQuery(className:"Memory")
@@ -203,7 +204,7 @@ class sessionManager: NSObject {
             }
         }
     }
-    
+
     func updateMemArray(memory:Memory) {
         // loop through memories
         for m in memories {
@@ -239,7 +240,7 @@ class sessionManager: NSObject {
             }
         }
     }
-    
+
     func deleteMemArray(memory:Memory) {
         // loop through all memories in array
         for i in 0..<memories.count-1 {

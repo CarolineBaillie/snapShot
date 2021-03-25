@@ -22,14 +22,10 @@ class memInfoPage : UIViewController {
     @IBOutlet weak var memTags: UITextView!
     @IBOutlet weak var memDate: UILabel!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.memTitle.text = page.title
-        memTitle.adjustsFontSizeToFitWidth = memTitle.minimumScaleFactor == 0.2
+        memTitle.adjustsFontSizeToFitWidth = true
         self.memImage.image = page.Image
         self.memDesc.text = page.desc
         self.memCategory.text = page.category
@@ -41,7 +37,7 @@ class memInfoPage : UIViewController {
     
     @objc func reloadContent (notification: NSNotification){
         self.memTitle.text = page.title
-        memTitle.adjustsFontSizeToFitWidth = memTitle.minimumScaleFactor == 0.2
+        memTitle.adjustsFontSizeToFitWidth = true
         self.memImage.image = page.Image
         self.memDesc.text = page.desc
         self.memCategory.text = page.category
@@ -86,7 +82,7 @@ class memInfoPage : UIViewController {
         present(confirmAlert, animated: true, completion: nil)
     }
 }
-
+// function to go back to settings contoller
 extension UINavigationController {
   func popToViewController(ofClass: AnyClass, animated: Bool = true) {
     if let vc = viewControllers.last(where: { $0.isKind(of: ofClass) }) {

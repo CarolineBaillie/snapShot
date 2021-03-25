@@ -41,7 +41,8 @@ class newMemory : UIViewController, UITextFieldDelegate, CLLocationManagerDelega
     @IBAction func saveToggled(_ sender: Any) {
         self.showSpinner()
         // For Computer
-        let coord = CLLocationCoordinate2D(latitude: Double.random(in: 26..<29), longitude: Double.random(in: -81 ..< -78))
+        //let coord = CLLocationCoordinate2D(latitude: Double.random(in: 26..<29), longitude: Double.random(in: -81 ..< -78))
+        let coord = CLLocationCoordinate2D(latitude: 28.3647, longitude: -82.1959)
         // find current location
 //        getUserLocation()
 //        let coord = sessionManager.shared.currentCoord

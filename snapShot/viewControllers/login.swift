@@ -18,12 +18,6 @@ class login: UIViewController {
         super.viewDidLoad()
     }
 
-    //get rid of keyboard when touch screen
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-    }
-
     @IBAction func loginToggled(_ sender: Any) {
         // loading icon
         self.showSpinner()

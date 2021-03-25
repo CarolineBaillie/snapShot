@@ -28,7 +28,7 @@ class infoToSettings : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.memTitle.text = page.title
-        memTitle.adjustsFontSizeToFitWidth = memTitle.minimumScaleFactor == 0.2
+        memTitle.adjustsFontSizeToFitWidth = true
         self.memImage.image = page.Image
         self.memDesc.text = page.desc
         self.memCategory.text = page.category
@@ -46,7 +46,7 @@ class infoToSettings : UIViewController {
     
     @objc func reloadContent (notification: NSNotification){
         self.memTitle.text = page.title
-        memTitle.adjustsFontSizeToFitWidth = memTitle.minimumScaleFactor == 0.2
+        memTitle.adjustsFontSizeToFitWidth = true
         self.memImage.image = page.Image
         self.memDesc.text = page.desc
         self.memCategory.text = page.category

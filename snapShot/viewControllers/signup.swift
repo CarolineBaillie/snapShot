@@ -20,13 +20,6 @@ class signup: UIViewController {
         super.viewDidLoad()
     }
 
-    //get rid of keyboard when touch screen
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        emailTextField.resignFirstResponder()
-    }
-
     @IBAction func signupToggled(_ sender: Any) {
         // loading icon
         self.showSpinner()
@@ -49,6 +42,4 @@ class signup: UIViewController {
             }
         }
     }
-    
-
 }
